@@ -45,13 +45,63 @@ classDiagram
         LARGE
     }
     
+    class FlyingStrategy {
+        <<interface>>
+        +fly()* void
+    }
+    
+    class SwimmingStrategy {
+        <<interface>>
+        +swim()* void
+    }
+    
+    class GlidingFlyingStrategy {
+        +fly() void
+    }
+    
+    class SoaringFlyingStrategy {
+        +fly() void
+    }
+    
+    class FlappingFlyingStrategy {
+        +fly() void
+    }
+    
+    class SplashingSwimmingStrategy {
+        +swim() void
+    }
+    
+    class SmoothSwimmingStrategy {
+        +swim() void
+    }
+    
     Relationships
+    
     Bird <|-- Sparrow
     Bird <|-- Pigeon
     Bird <|-- Penguin
+    
     Flyable <|-- Sparrow
     Flyable <|-- Pigeon
-    Swimmable <|-- Penguin
     Flyable <|-- Swan
+    Swimmable <|-- Penguin
     Swimmable <|-- Swan
+    
+    FlyingStrategy <|-- GlidingFlyingStrategy
+    FlyingStrategy <|-- FlappingFlyingStrategy
+    FlyingStrategy <|-- SoaringFlyingStrategy
+    SwimmingStrategy <|-- SplashingSwimmingStrategy
+    SwimmingStrategy <|-- SmoothSwimmingStrategy
+    
+    Pigeon "1" --o "*" FlyingStrategy
+    Sparrow "1" --o "*" FlyingStrategy
+     
+    Swan "1" --o "*" SwimmingStrategy
+    Swan "1" --o "*" FlyingStrategy
+    
+    Penguin "1" --o "*" SwimmingStrategy
+    
+    
+    
+    
 ```
