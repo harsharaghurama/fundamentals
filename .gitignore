@@ -1,16 +1,1 @@
-### IntelliJ IDEA ###
-.idea*
-*.iws
-*.iml
-*.ipr
-.DS_Store
-.gitignore.swp
-HELP.md
-fundamentals.iml
-mvnw
-mvnw.cmd
-.idea
-*.iml
-target/
-/.idea/
-/lld/target/
+
