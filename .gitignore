@@ -1,4 +1,5 @@
 
 /lld/target/
-/.idea/
+/.idea/**
 /lld/.idea/
+
